@@ -39,9 +39,18 @@ const items = [
 ];
 
 const NavBar = () => {
+  const arrayDeCategorias = [
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing",
+  ];
   return (
     <div className={style.container}>
       <h1>VIP Ecomerce</h1>
+      {arrayDeCategorias.map((cat, index) => (
+        <p key={index}>{cat}</p>
+      ))}
       <Dropdown menu={{ items }}>
         <a onClick={(e) => e.preventDefault()}>
           <Space>
